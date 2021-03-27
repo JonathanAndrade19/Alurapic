@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'alurapic';
+  description = 'Flamengo-2020';
+  url = '../assets/img/flamengo-2020.jpg';
 }
