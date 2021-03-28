@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-photo',
@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class PhotoComponent {
   
-  description = 'Flamengo-2020';
-  url = '../../assets/img/flamengo-2020.jpg';
+  @Input() description = '';
+  @Input() url = '';
 }
