@@ -1,12 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from "@angular/core";
 
 @Component({
-  selector: 'app-photo',
-  templateUrl: './photo.component.html',
-  styleUrls: ['./photo.component.css']
+    selector: 'ap-photo',
+    templateUrl: 'photo.component.html'
 })
+
+
 export class PhotoComponent {
-  
-  @Input() description = '';
-  @Input() url = '';
-}
+
+    @Input() url ="";
+    @Input() description ="";
+    
+ }

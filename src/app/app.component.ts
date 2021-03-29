@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,20 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-  photos = [
-    {
-      url: '../assets/img/Gabi.jpg',
-      description: 'Gabi and Gerson'
-    },
-    {
-      url: '../assets/img/flamengo-2020.jpg',
-      description: 'team of Flamengo'
-    },
-    {
-      url: '../assets/img/campeao.jpeg',
-      description: 'congratulation'
-    }
-  ]
 
+  photos: Object[] = [];
+
+  constructor(http:HttpClient) {
+    http
+      .get<[Object]>('http://localhost:3000/flavio/photos')
+      .subscribe(photos => this.photos = photos, err => console.log(err));
+  }
 }
