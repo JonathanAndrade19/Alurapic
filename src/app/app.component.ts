@@ -14,6 +14,6 @@ export class AppComponent {
 
     photoService
       .listFromUser('flavio')
-      .subscribe(photos => { console.log(photos[0].description); this.photos = photos });
+      .subscribe(photos => this.photos = photos);
   }
 }
