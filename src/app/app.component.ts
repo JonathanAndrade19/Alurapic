@@ -10,10 +10,13 @@ export class AppComponent {
 
   photos: any[] = [];
 
-  constructor(photoService: PhotoService) {
+  constructor(private photoService: PhotoService) { }
+  
+  ngOnInit(): void {
 
-    photoService
+    this.photoService
       .listFromUser('flavio')
       .subscribe(photos => this.photos = photos);
   }
+  
 }
