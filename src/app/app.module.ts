@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
-import { PhotosModule } from './photos/photos.module';
 
+import { PhotosModule } from './photos/photos.module';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    PhotosModule
+    PhotosModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
