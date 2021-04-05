@@ -10,7 +10,8 @@ import { Photo } from './../photo/photo';
 })
 export class PhotoListComponent implements OnInit {
 
-    photos: Photo[] = [];
+  photos: Photo[] = [];
+  filter: string = '';
 
   constructor(
     private photoService: PhotoService,
@@ -24,6 +25,13 @@ export class PhotoListComponent implements OnInit {
     this.photoService
       .listFromUser(userName)
       .subscribe(photos => this.photos = photos);
+  }
+
+    onKeyUp(target : any) {
+    if(target instanceof EventTarget) {
+      var elemento = target as HTMLInputElement;
+      this.filter = elemento.value;
+    }
   }
 
 }
